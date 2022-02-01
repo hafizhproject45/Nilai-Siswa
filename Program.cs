@@ -6,9 +6,12 @@ namespace tugasRPLNilaiAkhir
     {
         static void Main(string[] args)
         {
+            // Tipe Data
             string? nama;
             double? nis, nAbsen, nTugas, nUts, nUas, jnAbsen, jnTugas, jnUts, jnUas, hasil;
 
+            // Input dan Output
+            
             Console.WriteLine("\n======================================");
             Console.Write("\nNIS : ");
             nis = double.Parse(Console.ReadLine());
@@ -28,18 +31,24 @@ namespace tugasRPLNilaiAkhir
             Console.Write("Nilai UAS : ");
             nUas = double.Parse(Console.ReadLine());
 
-            // Penjumlahan
+            // Convert
 
             jnAbsen = Convert.ToDouble(nAbsen);
             jnTugas = Convert.ToDouble(nTugas);
             jnUts = Convert.ToDouble(nUts);
             jnUas = Convert.ToDouble(nUas);
 
+            // Penjumlahan
+            
             hasil = (jnAbsen * 10 / 100) + (jnTugas * 20 / 100) + (jnUts * 30 / 100) +
             (jnUas * 40 / 100);
-
+            
+            // Print Nilai
+            
             Console.WriteLine("Nilai Akhir : " + hasil);
 
+            // Ranking
+            
             Console.WriteLine("\n======================================\n");
             if (hasil >= 80)
             {
